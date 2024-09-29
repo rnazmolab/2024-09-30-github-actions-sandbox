@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: |
           ./a.sh
-
+          pacman --version

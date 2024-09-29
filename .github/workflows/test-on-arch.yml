@@ -1,10 +1,6 @@
 name: Test on Arch Linux
 
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+on: [push]
 
 jobs:
   test-arch:

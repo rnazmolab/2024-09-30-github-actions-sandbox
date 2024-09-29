@@ -39,3 +39,20 @@ jobs:
         run: |
           ./a.sh
           pacman --version
+
+  test-on-manjaro:
+    runs-on: ubuntu-latest
+    container:
+      image: manjarolinux:base
+      options: --privileged
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          pacman -Sy --noconfirm
+          # Install required packages...
+      - name: Run tests
+        run: |
+          ./a.sh
+          pacman --version

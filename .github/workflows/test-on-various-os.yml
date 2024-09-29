@@ -24,7 +24,7 @@ jobs:
           brew --version
 
   test-on-arch:
-    runs-on: ubuntu-latest
+    runs-on: arch-latest
     container:
       image: archlinux:base
       options: --privileged
@@ -41,9 +41,9 @@ jobs:
           pacman --version
 
   test-on-manjaro:
-    runs-on: ubuntu-latest
+    runs-on: manjaro-latest
     container:
-      image: manjarolinux:latest
+      image: manjarolinux/base:latest
       options: --privileged
     steps:
       - name: Checkout code

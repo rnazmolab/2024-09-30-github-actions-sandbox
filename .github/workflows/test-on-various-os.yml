@@ -1,4 +1,4 @@
-name: Test on Arch Linux
+name: Test on Various OS
 
 on: [push]
 
@@ -43,7 +43,7 @@ jobs:
   test-on-manjaro:
     runs-on: ubuntu-latest
     container:
-      image: manjarolinux:base
+      image: manjarolinux:latest
       options: --privileged
     steps:
       - name: Checkout code
